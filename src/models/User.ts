@@ -16,6 +16,8 @@ export interface IUser extends Document {
   walletFundingStatus: 'empty' | 'funded';
   userStatus: 'Verified' | 'Unverified';
   referralCode: string;
+  createdAt: Date;
+  updatedAt: Date;
   comparePassword(candidatePassword: string): Promise<boolean>;
 }
 
